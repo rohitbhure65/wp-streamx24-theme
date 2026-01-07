@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,27 +6,13 @@
     <meta name="google-site-verification" content="pIdUf78HWKtrgPmzr_FOpnMWA6qo92jlktnSLYscCKs" />
 </head>
 
-<body>
-    <header class="sx-header">
-        <div class="sx-container sx-header-inner">
-            <a href="index.html" class="sx-logo">
-                <span class="sx-logo-mark">SX</span>
-                <span class="sx-logo-text">StreamX24</span>
-            </a>
-            <button class="sx-nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-            </button>
-            <nav class="sx-nav">
-                <a href="index.html" class="active">Home</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-                <a href="privacy.html">Privacy</a>
-                <a href="terms.html">Terms</a>
-            </nav>
-        </div>
-    </header>
+<?php 
+    get_header();
+?>
 
+<?php
+get_header('inner');
+?>
     <main>
         <section class="sx-hero">
             <div class="sx-container sx-hero-grid">
@@ -260,26 +243,10 @@
         </section>
     </main>
 
-    <footer class="sx-footer">
-        <div class="sx-container sx-footer-inner">
-            <div>
-                <p class="sx-footer-logo">StreamX24</p>
-                <p class="sx-footer-text">
-                    Digital marketplace for premium plugins, themes, source code, and
-                    scripts.
-                </p>
-            </div>
-            <div class="sx-footer-links">
-                <a href="about.html">About Us</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms &amp; Conditions</a>
-            </div>
-            <p class="sx-footer-copy">
-                © <span id="year"></span> StreamX24. All rights reserved.
-            </p>
-        </div>
-    </footer>
+
+    <?php 
+    get_footer();
+?>  
 
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/main.js"></script>
     <!-- Google tag (gtag.js) -->
