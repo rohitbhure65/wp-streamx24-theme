@@ -13,12 +13,20 @@
                 <span></span>
                 <span></span>
             </button>
-            <nav class="sx-nav">
+            <!-- <nav class="sx-nav">
                 <a href="index.html" class="active">Home</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
-                <a href="privacy.html">Privacy</a>
+                <a href="privacy.html">Privacy</a> 
                 <a href="terms.html">Terms</a>
-            </nav>
+            </nav> --> 
+ <nav class="sx-nav">
+ <?php
+          wp_nav_menu(array(
+            'theme_location' => 'Header-Menu',
+            'menu_class' => 'navv',
+          ));
+        ?>
+    </nav>
         </div>
     </header>

@@ -135,33 +135,55 @@ main {
   letter-spacing: 0.03em;
 }
 
+/* NAV CONTAINER */
 .sx-nav {
   display: flex;
   align-items: center;
-  gap: 0.2rem;
 }
 
-.sx-nav a {
+/* WRAPPER DIV */
+.sx-nav .navv {
+  width: 100%;
+}
+
+/* UL */
+.sx-nav .navv ul {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* LINKS */
+.sx-nav .navv ul li a {
+  display: block;
   font-size: 0.88rem;
   padding: 0.45rem 0.75rem;
   border-radius: 999px;
   color: var(--sx-muted);
+  text-decoration: none;
   transition: background var(--sx-transition-fast),
     color var(--sx-transition-fast), transform var(--sx-transition-fast);
 }
 
-.sx-nav a:hover {
+/* HOVER */
+.sx-nav .navv ul li a:hover {
   background: rgba(15, 23, 42, 0.85);
   color: #e5f0ff;
   transform: translateY(-1px);
 }
 
-.sx-nav a.active {
+/* ACTIVE PAGE (WordPress default) */
+.sx-nav .navv ul li.current_page_item > a,
+.sx-nav .navv ul li.current-menu-item > a {
   background: var(--sx-primary-soft);
   color: #e5f0ff;
   box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.5);
 }
 
+/* MOBILE TOGGLE BUTTON */
 .sx-nav-toggle {
   display: none;
   background: transparent;
@@ -184,7 +206,6 @@ main {
   transition: transform var(--sx-transition-fast),
     opacity var(--sx-transition-fast);
 }
-
 /* Hero */
 
 .sx-hero {
@@ -628,7 +649,7 @@ main {
   z-index: 1;
 }
 
-.sx-screenshots-grid img{
+.sx-screenshots-grid img {
   /* padding: 10px; */
   margin: 10px;
   border: white 2px solid;
@@ -1074,4 +1095,9 @@ main {
     min-width: 140px;
     padding: 0.3rem 0.65rem;
   }
+}
+
+.navv ul {
+  display: flex;
+  list-style: none;
 }
