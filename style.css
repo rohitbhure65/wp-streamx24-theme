@@ -855,7 +855,6 @@ main {
   border-top: 1px solid rgba(30, 64, 175, 0.7);
   background: radial-gradient(circle at top, #020617 0, #020617 40%, #000 100%);
   padding: 1.3rem 0 1.4rem;
-  margin-top: 1.3rem;
 }
 
 .sx-footer-inner {

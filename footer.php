@@ -18,3 +18,14 @@
             </p>
         </div>
     </footer>
+
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/main.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P1G1G7PLGC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-P1G1G7PLGC');
+    </script>
