@@ -85,6 +85,14 @@ main {
   padding: 0 1.25rem;
 }
 
+.sx-container p img {
+  width: 100%;
+  height: auto;          /* IMPORTANT */
+  display: block;        /* removes bottom gap */
+  border-radius: 12px;   /* optional: modern look */
+  object-fit: cover;
+}
+
 /* Header & Navigation */
 
 .sx-header {
