@@ -28,7 +28,7 @@
                 printf(
                     /* translators: Copyright year and site name */
                     esc_html__( '&copy; %s StreamX24. All rights reserved.', 'streamx24' ),
-                    '<span id="current-year">' . esc_html( gmdate( 'Y' ) ) . '</span>'
+                    '<span id="year">' . esc_html( gmdate( 'Y' ) ) . '</span>'
                 );
                 ?>
             </p>
