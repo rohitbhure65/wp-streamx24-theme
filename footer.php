@@ -1,31 +1,41 @@
+<?php
+/**
+ * The Footer template for our theme
+ *
+ * @package StreamX24
+ * @since 1.0.0
+ */
+?>
+
     <footer class="sx-footer">
         <div class="sx-container sx-footer-inner">
             <div>
                 <p class="sx-footer-logo">StreamX24</p>
                 <p class="sx-footer-text">
-                    Digital marketplace for premium plugins, themes, source code, and
-                    scripts.
+                    <?php esc_html_e( 'Digital marketplace for premium plugins, themes, source code, and scripts.', 'streamx24' ); ?>
                 </p>
             </div>
+            
             <div class="sx-footer-links">
-                <a href="about.html">About Us</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms &amp; Conditions</a>
+                <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>"><?php esc_html_e( 'About Us', 'streamx24' ); ?></a>
+                <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php esc_html_e( 'Contact Us', 'streamx24' ); ?></a>
+                <a href="<?php echo esc_url( home_url( '/privacy-policy/' ) ); ?>"><?php esc_html_e( 'Privacy Policy', 'streamx24' ); ?></a>
+                <a href="<?php echo esc_url( home_url( '/terms-conditions/' ) ); ?>"><?php esc_html_e( 'Terms &amp; Conditions', 'streamx24' ); ?></a>
             </div>
+            
             <p class="sx-footer-copy">
-                © <span id="year"></span> StreamX24. All rights reserved.
+                <?php 
+                printf(
+                    /* translators: Copyright year and site name */
+                    esc_html__( '&copy; %s StreamX24. All rights reserved.', 'streamx24' ),
+                    '<span id="current-year">' . esc_html( gmdate( 'Y' ) ) . '</span>'
+                );
+                ?>
             </p>
         </div>
     </footer>
 
-    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/main.js"></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P1G1G7PLGC"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+    <?php wp_footer(); ?>
+</body>
+</html>
 
-        gtag('config', 'G-P1G1G7PLGC');
-    </script>
