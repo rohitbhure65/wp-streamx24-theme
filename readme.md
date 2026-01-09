@@ -1,3 +1,4 @@
+```
 my-theme/
 │
 ├── style.css
@@ -451,4 +452,4 @@ function mytheme_ajax_demo() {
 }
 add_action('wp_ajax_mytheme_test', 'mytheme_ajax_demo');
 add_action('wp_ajax_nopriv_mytheme_test', 'mytheme_ajax_demo');
-
+```
